@@ -7,6 +7,7 @@ A Java Swing desktop application that generates cryptographically secure passwor
 - Makes sure there is at least one uppercase, lowercase, number, and special character
 - Save passwords with site and username
 - View all saved entries in a password.db file
+- Remove saved entries by selecting a row and clicking Remove Selected
 - Local storage in SQLite
 
 ## Requirements
