@@ -12,7 +12,7 @@ public class GeneratePasswordButton {
         DatabaseManager.init();
 
         JFrame frame = new JFrame("Password Manager");
-        frame.setSize(600,400);
+        frame.setSize(1000,800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
@@ -39,6 +39,19 @@ public class GeneratePasswordButton {
                 if (bg[0] != null) g.drawImage(bg[0], 0, 0, getWidth(), getHeight(), this);
             }
         };
+
+        JButton deleteButton = new JButton("Remove Selected");
+        deleteButton.addActionListener( e->{
+            int row = table.getSelectedRow();
+            if(row != 1){
+                String site = (String) model.getValueAt(row, 0);
+                String user = (String)model.getValueAt(row, 1);
+                DatabaseManager.deletePassword(site, user);
+                model.removeRow(row);
+            }
+
+                });
+        inputPanel.add(deleteButton);
 
         tablePanel.addMouseListener(new MouseAdapter() {
             @Override

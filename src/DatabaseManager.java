@@ -26,6 +26,15 @@ public class DatabaseManager {
         } catch (SQLException e) { e.printStackTrace();}
     }
 
+    public static void deletePassword(String site, String username){
+        try (Connection conn = DriverManager.getConnection(URL);
+             PreparedStatement ps = conn.prepareStatement("DELETE FROM passwords WHERE site=? AND username=?")){
+            ps.setString(1, site);
+            ps.setString(2, username);
+            ps.executeUpdate();
+        } catch (SQLException e) { e.printStackTrace();}
+    }
+
 
     public static ResultSet getAllPasswords() throws SQLException {
         Connection conn = DriverManager.getConnection(URL);
