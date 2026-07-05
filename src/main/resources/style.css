@@ -1,0 +1,179 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #1a1b26, #16161e);
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.title-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(122,162,247,0.55), 18, 0.4, 0, 0);
+}
+
+.subtitle-label {
+    -fx-text-fill: #9aa5ce;
+    -fx-font-size: 13px;
+}
+
+.card {
+    -fx-background-color: #24283b;
+    -fx-background-radius: 16px;
+    -fx-padding: 36px;
+    -fx-border-radius: 16px;
+    -fx-border-color: rgba(122,162,247,0.25);
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(122,162,247,0.18), 35, 0.15, 0, 10);
+}
+
+.text-field, .password-field {
+    -fx-background-color: #1f2335;
+    -fx-text-fill: #c0caf5;
+    -fx-prompt-text-fill: #565f89;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #2f334d;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 14px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #7aa2f7;
+    -fx-effect: dropshadow(gaussian, rgba(122,162,247,0.45), 14, 0.3, 0, 0);
+}
+
+.primary-button {
+    -fx-background-color: #7aa2f7;
+    -fx-text-fill: #1a1b26;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(122,162,247,0.45), 16, 0.25, 0, 4);
+}
+
+.primary-button:hover {
+    -fx-background-color: #89b4fa;
+    -fx-effect: dropshadow(gaussian, rgba(122,162,247,0.75), 22, 0.35, 0, 6);
+}
+
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f7768e;
+    -fx-border-color: #f7768e;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 9px 18px;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: rgba(247, 118, 142, 0.12);
+    -fx-effect: dropshadow(gaussian, rgba(247,118,142,0.45), 16, 0.25, 0, 0);
+}
+
+.icon-button {
+    -fx-background-color: #1f2335;
+    -fx-text-fill: #c0caf5;
+    -fx-background-radius: 6px;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-border-color: #2f334d;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+}
+
+.icon-button:hover {
+    -fx-background-color: #2f334d;
+    -fx-text-fill: #7aa2f7;
+    -fx-border-color: #7aa2f7;
+}
+
+.error-label {
+    -fx-text-fill: #f7768e;
+    -fx-font-size: 12px;
+}
+
+.toast-label {
+    -fx-text-fill: #9ece6a;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.empty-label {
+    -fx-text-fill: #565f89;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+}
+
+.table-view {
+    -fx-background-color: #1f2335;
+    -fx-background-radius: 12px;
+    -fx-padding: 4px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 20, 0, 0, 6);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #24283b;
+    -fx-background-radius: 12px 12px 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 38px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #9aa5ce;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.table-row-cell {
+    -fx-background-color: #1f2335;
+    -fx-text-fill: #c0caf5;
+    -fx-border-color: transparent transparent #292e42 transparent;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #262b40;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #2f334d;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #20243a;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #c0caf5;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER-LEFT;
+}
+
+.dialog-pane {
+    -fx-background-color: #24283b;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #c0caf5;
+    -fx-font-size: 13px;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #1f2335;
+    -fx-text-fill: #c0caf5;
+    -fx-background-radius: 6px;
+    -fx-border-color: #2f334d;
+    -fx-border-radius: 6px;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #2f334d;
+    -fx-text-fill: #7aa2f7;
+}

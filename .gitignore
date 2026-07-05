@@ -30,3 +30,10 @@ bin/
 .DS_Storepasswords.db
 passwords.db
 .DS_Store
+target/
+.idea/
+*.iml
+.vscode/
+.DS_Store
+*.db
+*.csv

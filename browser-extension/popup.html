@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    width: 320px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(160deg, #1a1b26, #16161e);
+    color: #c0caf5;
+    margin: 0;
+    padding: 16px;
+  }
+  h1 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+    color: #fff;
+    text-shadow: 0 0 12px rgba(122,162,247,0.6);
+  }
+  .site-tag {
+    font-size: 11px;
+    color: #9aa5ce;
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #565f89;
+    margin: 14px 0 8px 0;
+  }
+  .entry {
+    background: #24283b;
+    border: 1px solid rgba(122,162,247,0.2);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.15s;
+  }
+  .entry:hover { box-shadow: 0 0 12px rgba(122,162,247,0.25); }
+  .entry-site { font-weight: bold; color: #7aa2f7; font-size: 12px; }
+  .entry-user { color: #9aa5ce; font-size: 12px; }
+  .btn-group { display: flex; gap: 6px; }
+  button {
+    background: #7aa2f7;
+    color: #1a1b26;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s;
+  }
+  button:hover { background: #89b4fa; box-shadow: 0 0 10px rgba(122,162,247,0.6); }
+  button.ghost {
+    background: #1f2335;
+    color: #c0caf5;
+    border: 1px solid #2f334d;
+  }
+  button.ghost:hover { border-color: #7aa2f7; color: #7aa2f7; box-shadow: none; }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    background: #1f2335;
+    border: 1px solid #2f334d;
+    border-radius: 7px;
+    color: #c0caf5;
+    font-size: 12px;
+    padding: 8px 10px;
+    margin-bottom: 7px;
+    outline: none;
+  }
+  input:focus { border-color: #7aa2f7; box-shadow: 0 0 8px rgba(122,162,247,0.4); }
+  .password-row { display: flex; gap: 6px; }
+  .password-row input { flex: 1; margin-bottom: 7px; }
+  .status { font-size: 11px; margin-top: 4px; min-height: 14px; }
+  .status.err { color: #f7768e; }
+  .status.ok { color: #9ece6a; }
+  .muted { font-size: 12px; color: #565f89; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Password Vault</h1>
+<div class="site-tag" id="siteTag"></div>
+
+<div class="section-title">Saved logins</div>
+<div id="entries"><div class="muted">Loading...</div></div>
+
+<div class="section-title">Add a login</div>
+<input id="addSite" type="text" placeholder="Site name" />
+<input id="addUsername" type="text" placeholder="Username" />
+<div class="password-row">
+  <input id="addPassword" type="text" placeholder="Password" />
+  <button class="ghost" id="genBtn" title="Generate a strong password">&#10024;</button>
+</div>
+<button id="saveBtn" style="width:100%;">Save to Vault</button>
+<div class="status" id="addStatus"></div>
+
+<script src="popup.js"></script>
+</body>
+</html>

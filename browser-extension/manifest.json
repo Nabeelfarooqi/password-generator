@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "My Password Vault",
+  "version": "1.0",
+  "description": "Autofill from your personal password vault",
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

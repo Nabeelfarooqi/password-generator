@@ -1,6 +1,6 @@
 import java.security.SecureRandom;
-import java.util.Collections;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PasswordGenerator {
